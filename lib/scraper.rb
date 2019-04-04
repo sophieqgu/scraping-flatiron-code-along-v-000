@@ -14,6 +14,7 @@ class Scraper
   
   def make_courses 
     self.get_courses.each {|course| course = Course.new}
+  end 
   
   def print_courses
     self.make_courses
