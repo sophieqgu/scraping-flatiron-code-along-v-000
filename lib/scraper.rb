@@ -15,7 +15,6 @@ class Scraper
   def make_courses 
     self.get_courses.each do |course| 
       course = Course.new
-      binding.pry
       course.title = course.search("h2").text
     end 
       
