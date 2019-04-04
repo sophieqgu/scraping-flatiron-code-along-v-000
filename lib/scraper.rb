@@ -16,7 +16,8 @@ class Scraper
     self.get_courses.each do |course| 
       course = Course.new
       course.title = course["h2"].text
-      course.schedule = course[]
+      course.schedule = course[".date"].text
+      course.
     end 
       
   end 
