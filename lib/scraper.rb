@@ -17,7 +17,7 @@ class Scraper
       course = Course.new
       course.title = course["h2"].text
       course.schedule = course[".date"].text
-      course.description = course[]
+      course.description = course["p"].text
     end 
       
   end 
