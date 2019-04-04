@@ -9,7 +9,11 @@ class Scraper
   end 
   
   def get_courses
-    self.get_page.css()
+    self.get_page.css("h2").text
+  end 
+  
+  def make_courses 
+    self.get_courses.each {|course| course = Course.new}
   
   def print_courses
     self.make_courses
