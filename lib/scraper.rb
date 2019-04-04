@@ -13,7 +13,7 @@ class Scraper
   end 
   
   def make_courses 
-    self.get_courses.each {|course| course = Course.new}
+    self.get_courses.collect {|course| course = Course.new}
   end 
   
   def print_courses
