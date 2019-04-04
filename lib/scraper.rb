@@ -13,11 +13,11 @@ class Scraper
   end 
   
   def make_courses 
-    self.get_courses.each do |course| 
+    self.get_courses.each do |c| 
       course = Course.new
-      course.title = course["h2"].text
-      course.schedule = course[".date"].text
-      course.description = course["p"].text
+      course.title = c.css("h2").text
+      course.schedule = c.css(".date").text
+      course.description = c.css("p").text
     end 
       
   end 
